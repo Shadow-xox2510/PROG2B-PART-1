@@ -68,5 +68,14 @@ Verification queries were used to confirm that:
 - GitHub
 - GitHub Actions
 
+## Continuous Integration
+
+The project uses GitHub Actions to automatically validate the repository whenever changes are pushed to the `main` branch.
+
+The CI workflow checks that:
+- Required project files exist.
+- All six database tables are included in the SQL script.
+- Required database constraints are present.
+
 
 
