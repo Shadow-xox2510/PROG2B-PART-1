@@ -26,11 +26,11 @@ The system allows organisers to create and manage events, categories, participan
 ## Project Documentation
 
 The `/docs` folder contains:
+- Entity Relationship Diagram (ERD)
+- API Endpoint Plan
 
-* Entity Relationship Diagram (ERD)
-* API Endpoint Plan
-* SQL Database Script
+The `/database` folder contains:
+- SQL Database Script
 
-## Database
 
-The SQL script creates the complete RaceDay database including tables, relationships, constraints and realistic sample data for testing in SQL Server Management Studio.
+
