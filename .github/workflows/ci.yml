@@ -1,0 +1,36 @@
+name: RaceDay CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate required files
+        run: |
+          test -f README.md
+          test -f database/SQLQuery1_RACEDAY.sql
+          test -f docs/ST10473355_PROG2B_PART1.pdf
+
+      - name: Validate SQL script
+        run: |
+          grep -qi "CREATE DATABASE RaceDayDB" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE Users" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE Routes" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE Events" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE Categories" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE EventEnrolments" database/SQLQuery1_RACEDAY.sql
+          grep -qi "CREATE TABLE Results" database/SQLQuery1_RACEDAY.sql
+
+      - name: Validation successful
+        run: echo "RaceDay project validation completed successfully."
