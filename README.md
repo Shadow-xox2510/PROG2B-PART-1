@@ -32,5 +32,12 @@ The `/docs` folder contains:
 The `/database` folder contains:
 - SQL Database Script
 
+## Setup Instructions
+
+1. Open SQL Server Management Studio (SSMS).
+2. Open `database/SQLQuery1_RACEDAY.sql`.
+3. Run the script on a fresh SQL Server instance.
+4. The script creates the `RaceDayDB` database, tables, relationships, constraints and sample data.
+
 
 
