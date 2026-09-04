@@ -39,5 +39,15 @@ The `/database` folder contains:
 3. Run the script on a fresh SQL Server instance.
 4. The script creates the `RaceDayDB` database, tables, relationships, constraints and sample data.
 
+## Database Testing
+
+The SQL database was tested using SQL Server Management Studio.
+
+Verification queries were used to confirm that:
+- All six tables were created successfully.
+- Primary and foreign-key relationships are present.
+- Seed data is available for all entities.
+- Enrolments can exist without a result.
+
 
 
