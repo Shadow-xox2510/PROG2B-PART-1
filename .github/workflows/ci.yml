@@ -34,3 +34,10 @@ jobs:
 
       - name: Validation successful
         run: echo "RaceDay project validation completed successfully."
+
+              - name: Validate SQL constraints
+        run: |
+          grep -qi "PRIMARY KEY" database/SQLQuery1_RACEDAY.sql
+          grep -qi "FOREIGN KEY" database/SQLQuery1_RACEDAY.sql
+          grep -qi "NOT NULL" database/SQLQuery1_RACEDAY.sql
+          grep -qi "UNIQUE" database/SQLQuery1_RACEDAY.sql
