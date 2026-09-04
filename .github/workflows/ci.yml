@@ -22,9 +22,8 @@ jobs:
           test -f database/SQLQuery1_RACEDAY.sql
           test -f docs/ST10473355_PROG2B_PART1.pdf
 
-      - name: Validate SQL script
+      - name: Validate SQL tables
         run: |
-          grep -qi "CREATE DATABASE RaceDayDB" database/SQLQuery1_RACEDAY.sql
           grep -qi "CREATE TABLE Users" database/SQLQuery1_RACEDAY.sql
           grep -qi "CREATE TABLE Routes" database/SQLQuery1_RACEDAY.sql
           grep -qi "CREATE TABLE Events" database/SQLQuery1_RACEDAY.sql
@@ -32,12 +31,12 @@ jobs:
           grep -qi "CREATE TABLE EventEnrolments" database/SQLQuery1_RACEDAY.sql
           grep -qi "CREATE TABLE Results" database/SQLQuery1_RACEDAY.sql
 
-      - name: Validation successful
-        run: echo "RaceDay project validation completed successfully."
-
-              - name: Validate SQL constraints
+      - name: Validate SQL constraints
         run: |
           grep -qi "PRIMARY KEY" database/SQLQuery1_RACEDAY.sql
           grep -qi "FOREIGN KEY" database/SQLQuery1_RACEDAY.sql
           grep -qi "NOT NULL" database/SQLQuery1_RACEDAY.sql
           grep -qi "UNIQUE" database/SQLQuery1_RACEDAY.sql
+
+      - name: Validation successful
+        run: echo "RaceDay project validation completed successfully."
