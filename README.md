@@ -49,5 +49,15 @@ Verification queries were used to confirm that:
 - Seed data is available for all entities.
 - Enrolments can exist without a result.
 
+## Main System Features
+
+- User registration and login
+- User profile management
+- Event creation and management
+- Event category management
+- Participant enrolment
+- Race result management
+- Role-based functionality for organisers and participants
+
 
 
