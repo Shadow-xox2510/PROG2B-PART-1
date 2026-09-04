@@ -59,5 +59,14 @@ Verification queries were used to confirm that:
 - Race result management
 - Role-based functionality for organisers and participants
 
+## Technologies
+
+- C#
+- SQL Server
+- SQL Server Management Studio (SSMS)
+- Git
+- GitHub
+- GitHub Actions
+
 
 
